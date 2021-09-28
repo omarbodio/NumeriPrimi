@@ -1,8 +1,29 @@
+import java.util.*;
 class Numero_primo{  
     public static void main(String [] args){
-       int numero=634763;  
+      
       System.out.println("Il numero "+numero+" è primo? "+primo(numero));
     }
+    
+    public Numero_primo() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("inserisci numero minore: ");
+        int numeroMin = scan.next();
+        System.out.println("inserisci numero MAGGIORE: ");
+        int numeroMagg = 0;
+        int primi = 0;
+    }
+
+    public static int sparaNumeri(int numeroMin, int numeroMagg){
+        int primi = 0;    
+        for (int i = numeroMin; i < numeroMagg; i++) {
+
+            if (primo(i) == true) primi++;
+            
+        }
+        return primi;
+    }
+    
     public static boolean primo(int n){  
       if (n<2)  
         return false;
